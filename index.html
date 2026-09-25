@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Finance</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f7fa;}
+    header {background:#004aad; color:white; padding:20px; text-align:center;}
+    nav {background:#003580; text-align:center; padding:10px;}
+    nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
+    .hero {background:#004aad; color:white; padding:60px 20px; text-align:center;}
+    .hero h1 {font-size:36px; margin-bottom:20px;}
+    .hero a {background:#ffcc00; padding:12px 25px; color:#003580; text-decoration:none; font-weight:bold; border-radius:5px;}
+    section {padding:40px 20px; max-width:1000px; margin:auto;}
+    form {max-width:600px; margin:auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
+    input, textarea {width:100%; padding:10px; margin:10px 0;}
+    button {background:#004aad; color:white; padding:12px 20px; border:none; border-radius:5px; cursor:pointer;}
+    footer {background:#003580; color:white; text-align:center; padding:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Corporate Finance</h2>
+    <p>Kết nối ngân hàng và tổ chức tài chính</p>
+  </header>
+
+  <nav>
+    <a href="#">Trang chủ</a>
+    <a href="#form">Đăng ký vay</a>
+    <a href="#">Sản phẩm vay</a>
+    <a href="#">FAQ</a>
+    <a href="#">Kiến thức</a>
+    <a href="#">Tiện ích</a>
+    <a href="#">Đăng nhập</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Giải pháp vay vốn nhanh chóng</h1>
+    <p>Hỗ trợ doanh nghiệp tiếp cận nguồn vốn dễ dàng</p>
+    <a href="#form">Đăng ký vay ngay</a>
+  </div>
+
+  <section id="form">
+    <h2>Đăng ký vay vốn</h2>
+    <form id="loanForm">
+      <label>Họ và tên:</label>
+      <input type="text" name="name" required>
+
+      <label>Số điện thoại:</label>
+      <input type="tel" name="phone" required>
+
+      <label>Email:</label>
+      <input type="email" name="email">
+
+      <label>Số tiền muốn vay (VNĐ):</label>
+      <input type="number" name="amount" required>
+
+      <label>Mục đích vay:</label>
+      <textarea name="purpose" rows="4"></textarea>
+
+      <button type="submit">Gửi đăng ký</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Hotline: 0358608830 | Email: nguyentung1809@outlook.com</p>
+    <p>&copy; 2026 Corporate Finance</p>
+  </footer>
+
+  <script>
+    // 👉 Thay đường link này bằng Web App URL bạn nhận được sau khi Deploy Apps Script
+    const scriptURL = "https://script.google.com/macros/s/AKfycbz--jv-5fiCFEvn6UX9RDbBTMWTooqNurazWmROZ_q-fBUD0gD3OZQ7dSuN_17Rq3hqfA/exec"; 
+    const form = document.getElementById("loanForm");
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => data[key] = value);
+
+      fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = "thankyou.html"; // Chuyển sang trang cảm ơn
+        }
+      })
+      .catch(error => alert("Có lỗi xảy ra: " + error));
+    });
+  </script>
+</body>
+</html>

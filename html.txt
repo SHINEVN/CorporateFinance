@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Finance</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f7fa;}
+    header {background:#004aad; color:white; padding:20px; text-align:center;}
+    nav {background:#003580; text-align:center; padding:10px;}
+    nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
+    .hero {background:#004aad; color:white; padding:60px 20px; text-align:center;}
+    .hero h1 {font-size:36px; margin-bottom:20px;}
+    .hero a {background:#ffcc00; padding:12px 25px; color:#003580; text-decoration:none; font-weight:bold; border-radius:5px;}
+    section {padding:40px 20px; max-width:1000px; margin:auto;}
+    footer {background:#003580; color:white; text-align:center; padding:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Corporate Finance</h2>
+    <p>Kết nối ngân hàng và tổ chức tài chính</p>
+  </header>
+
+  <nav>
+    <a href="#">Trang chủ</a>
+    <a href="#">Đăng ký vay</a>
+    <a href="#">Sản phẩm vay</a>
+    <a href="#">FAQ</a>
+    <a href="#">Kiến thức</a>
+    <a href="#">Tiện ích</a>
+    <a href="#">Đăng nhập</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Giải pháp vay vốn nhanh chóng</h1>
+    <p>Hỗ trợ doanh nghiệp tiếp cận nguồn vốn dễ dàng</p>
+    <a href="#">Đăng ký vay ngay</a>
+  </div>
+
+  <section>
+    <h2>Sản phẩm vay</h2>
+    <ul>
+      <li>Vay ngắn hạn</li>
+      <li>Vay dài hạn</li>
+      <li>Vay lưu động</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Câu hỏi thường gặp</h2>
+    <p>Chúng tôi giải đáp các thắc mắc phổ biến về điều kiện vay, hồ sơ và quy trình.</p>
+  </section>
+
+  <footer>
+    <p>Hotline: 0358608830 | Email: nguyentung1809@outlook.com</p>
+    <p>&copy; 2026 Corporate Finance</p>
+  </footer>
+</body>
+</html>
